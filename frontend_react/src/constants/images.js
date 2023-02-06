@@ -30,10 +30,14 @@ import logo from '../assets/logo.png';
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
 import asus from '../assets/asus.png';
+import apple from '../assets/apple.png';
 import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
+import meta from '../assets/meta.png';
+
+import portfolio from '../assets/portfolio.png'
 
 export default {
   email,
@@ -65,8 +69,11 @@ export default {
   adidas,
   amazon,
   asus,
+  apple,
   bolt,
   nb,
   skype,
   spotify,
+  meta,
+  portfolio,
 };

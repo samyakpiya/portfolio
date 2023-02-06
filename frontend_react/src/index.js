@@ -5,4 +5,9 @@ import App from './App';
 import './index.css';
 import 'react-tooltip/dist/react-tooltip.css'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root'),
+);

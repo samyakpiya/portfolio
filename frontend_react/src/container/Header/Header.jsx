@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Player } from '@lottiefiles/react-lottie-player';
 
 import { AppWrap } from '../../wrapper';
 import { images } from '../../constants';
@@ -44,7 +45,16 @@ const Header = () => (
       transition={{ duration: 0.5, delayChildren: 0.5 }}
       className="app__header-img"
     >
-      <img src={images.profile} alt="profile_bg" />
+      <div className="lottie">
+        <Player
+          autoplay
+          loop
+          src="https://assets3.lottiefiles.com/packages/lf20_m9fz64i8.json"
+          style={{ width: '100%'}}
+        >
+        </Player>
+      </div>
+      
       <motion.img
         whileInView={{ scale: [0, 1] }}
         transition={{ duration: 1, ease: 'easeInOut' }}
@@ -59,7 +69,7 @@ const Header = () => (
       whileInView={scaleVariants.whileInView}
       className="app__header-circles"
     >
-      {[images.flutter, images.redux, images.sass].map((circle, index) => (
+      {[images.cpp, images.javascript, images.python].map((circle, index) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
           <img src={circle} alt="profile_bg" />
         </div>
@@ -67,6 +77,5 @@ const Header = () => (
     </motion.div>
   </div>
 );
-
 
 export default AppWrap(Header, 'home');
