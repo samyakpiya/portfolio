@@ -38,6 +38,7 @@ import spotify from '../assets/spotify.png';
 import meta from '../assets/meta.png';
 
 import portfolio from '../assets/portfolio.png'
+import resume from '../assets/resume.pdf'
 
 export default {
   email,
@@ -76,4 +77,5 @@ export default {
   spotify,
   meta,
   portfolio,
+  resume
 };

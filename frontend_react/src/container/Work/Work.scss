@@ -88,6 +88,7 @@
     height: 100%;
     border-radius: 0.5rem;
     object-fit: cover;
+    background-color: #EDF2F7;
   }
 
   @media screen and (min-width: 2000px) {
@@ -151,6 +152,7 @@
     padding: 0.5rem 1rem;
     border-radius: 10px;
     background-color: #fff;
+
     top: -25px;
   }
 }

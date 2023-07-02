@@ -81,6 +81,29 @@
   }
 }
 
+.app__navbar-resume {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0.5rem;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  @media screen and (min-width: 2000px) {
+    padding: 1rem 2rem;
+    border-radius: 0.85rem;
+  }
+}
+
 .app__navbar-menu {
   width: 35px;
   height: 35px;
