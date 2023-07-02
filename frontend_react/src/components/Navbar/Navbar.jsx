@@ -9,6 +9,23 @@ import "./Navbar.scss";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
+  // Create a function to scroll to an element with an offset
+  const scrollTo = (id) => {
+    // Get the element
+    const element = document.getElementById(id);
+
+    // If the element exists
+    if (element) {
+      // Get its position
+      const rect = element.getBoundingClientRect();
+      const offset = 88; // Change this to the desired offset
+      const yPos = rect.top + window.pageYOffset - offset;
+
+      // Scroll to the element
+      window.scrollTo({ top: yPos, behavior: "smooth" });
+    }
+  };
+
   return (
     <nav className="app__navbar">
       <a href="./">
@@ -20,7 +37,7 @@ const Navbar = () => {
         {["home", "about", "work", "skills", "cv", "contact"].map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
-            <a href={`#${item}`}>{item}</a>
+            <button onClick={() => scrollTo(item)}>{item}</button>
           </li>
         ))}
       </ul>
@@ -36,10 +53,10 @@ const Navbar = () => {
 
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
-
         {toggle && (
           <motion.div
-            whileInView={{ x: [300, 0] }}
+            initial={{ x: 300 }}
+            animate={{ x: 0 }}
             transition={{ duration: 0.85, ease: "easeOut" }}
           >
             <HiX onClick={() => setToggle(false)} />
@@ -47,9 +64,14 @@ const Navbar = () => {
               {["home", "about", "work", "skills", "cv", "contact"].map(
                 (item) => (
                   <li key={item}>
-                    <a href={`#${item}`} onClick={() => setToggle(false)}>
+                    <button
+                      onClick={() => {
+                        setToggle(false);
+                        scrollTo(item);
+                      }}
+                    >
                       {item}
-                    </a>
+                    </button>
                   </li>
                 )
               )}

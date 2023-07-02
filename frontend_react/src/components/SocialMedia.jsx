@@ -5,11 +5,8 @@ import { FaGithub, FaStackOverflow } from "react-icons/fa";
 const SocialMedia = () => (
   <div className="app__social">
     <div>
-      <a href="https://github.com/piyasamyak" target="_blank" rel="noreferrer">
-        <img
-          src="https://fontawesome.com/v5/icons/github?f=brands&s=solid"
-          alt="github"
-        />
+      <a href="https://github.com/samyakpiya" target="_blank" rel="noreferrer">
+        <FaGithub />
       </a>
     </div>
     <div>
