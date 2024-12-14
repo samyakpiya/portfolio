@@ -21,6 +21,7 @@
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
+    align-self: flex-start;
   }
 
   @media screen and (min-width: 2000px) {

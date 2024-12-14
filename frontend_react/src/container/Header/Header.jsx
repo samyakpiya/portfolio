@@ -1,10 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Player } from '@lottiefiles/react-lottie-player';
+import React from "react";
+import { motion } from "framer-motion";
+import { Player } from "@lottiefiles/react-lottie-player";
 
-import { AppWrap } from '../../wrapper';
-import { images } from '../../constants';
-import './Header.scss';
+import { AppWrap } from "../../wrapper";
+import { images } from "../../constants";
+import "./Header.scss";
 
 const scaleVariants = {
   whileInView: {
@@ -12,7 +12,7 @@ const scaleVariants = {
     opacity: [0, 1],
     transition: {
       duration: 1,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };
@@ -50,14 +50,13 @@ const Header = () => (
           autoplay
           loop
           src="https://assets3.lottiefiles.com/packages/lf20_m9fz64i8.json"
-          style={{ width: '100%'}}
-        >
-        </Player>
+          style={{ width: "100%" }}
+        ></Player>
       </div>
-      
+
       <motion.img
         whileInView={{ scale: [0, 1] }}
-        transition={{ duration: 1, ease: 'easeInOut' }}
+        transition={{ duration: 1, ease: "easeInOut" }}
         src={images.circle}
         alt="profile_circle"
         className="overlay_circle"
@@ -69,7 +68,7 @@ const Header = () => (
       whileInView={scaleVariants.whileInView}
       className="app__header-circles"
     >
-      {[images.cpp, images.javascript, images.python].map((circle, index) => (
+      {[images.typescript, images.nextjs, images.react].map((circle, index) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
           <img src={circle} alt="profile_bg" />
         </div>
@@ -78,4 +77,4 @@ const Header = () => (
   </div>
 );
 
-export default AppWrap(Header, 'home');
+export default AppWrap(Header, "home");
